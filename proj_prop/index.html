@@ -51,7 +51,20 @@
 		This project involves building a CPU-based font renderer that loads TrueType (.ttf) or OpenType (.otf) font files using an existing parsing library and implements a Bezier curve rasterizer from scratch to display glyphs on screen. The rasterizer will convert each glyph's Bezier curve outlines into a filled pixel bitmap using scan line techniques, with anti-aliasing to produce smooth edges at varying sizes. Additional considerations include custom kanji fonts to be rendered.
 		
 		<h2>Problem Description</h2>
-		Here you should provide the context for your idea. Describe the problem that you are trying to solve, why it is important, where it is challenging. Give us a general idea on how you are going to solve it.
+		Rendering high-quality text on screen is a fundamental requirement for many graphics systems, yet it remains a nontrivial problem 
+		due to the mathematical complexity of font representations and the need for visually smooth results across different sizes and resolutions. 
+		Modern font formats such as TrueType (.ttf) and OpenType (.otf) define glyphs using Bézier curve outlines rather than simple bitmap images, 
+		which allows for scalability but requires sophisticated processing in order to convert these outlines into pixels. 
+
+		<p>The core problem our project aims to address is how to efficiently and accurately rasterize these Bézier-based glyphs into filled pixel representations 
+			using only CPU-based techniques. This involves interpreting curve data from font files, converting continuous vector shapes 
+			into discrete pixel grids, and ensuring that the resulting text appears smooth and legible. A key challenge lies in implementing a robust 
+			scanline rasterization algorithm that correctly fills complex shapes, including handling edge cases such as overlapping contours and sharp curve transitions. Additionally, 
+			achieving high-quality anti-aliasing is essential to avoid jagged edges, especially at smaller font sizes so that readability can be improved. 
+		</p>
+		<p>We implement a custom Bézier curve rasterizer from scratch, using scanline techniques to convert outlines into filled pixel bitmaps. 
+			Anti-aliasing methods will be incorporated to improve visual quality, which will result in a system capable of rendering scalable, high-fidelity text, including complex custom fonts and non-Latin based languages.</p>
+
 
 		<!-- <p>Here is an example 2x2 gridlike structure using an HTML table. Each <b>tr</b> is a row and each <b>td</b> is a column in that row. You might find this useful for framing and showing your result images in an organized fashion.</p>
 		<div style="display: flex; flex-direction: column; align-items: center;">
