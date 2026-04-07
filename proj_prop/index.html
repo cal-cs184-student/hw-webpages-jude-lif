@@ -48,9 +48,8 @@
 		-->
 
 		<h2>Summary</h2>
-		Provide us a descriptive title, 2-3 sentences that summarize your project, and list your four team members.
-		Please include your project name as the title of your proposal: this should be short, memorable, and relevant to the project you’re embarking on!	
-
+		This project involves building a CPU-based font renderer that loads TrueType (.ttf) or OpenType (.otf) font files using an existing parsing library and implements a Bezier curve rasterizer from scratch to display glyphs on screen. The rasterizer will convert each glyph's Bezier curve outlines into a filled pixel bitmap using scan line techniques, with anti-aliasing to produce smooth edges at varying sizes. Additional considerations include custom kanji fonts to be rendered.
+		
 		<h2>Problem Description</h2>
 		Here you should provide the context for your idea. Describe the problem that you are trying to solve, why it is important, where it is challenging. Give us a general idea on how you are going to solve it.
 
@@ -83,14 +82,19 @@
 		<h2>Goals and Deliverables</h2>
 		This is the most important part of your proposal. You should carefully think through what you are trying to accomplish, what results you are going for, and why you think you can accomplish those goals. For example:
 		Since this is a graphics class you will likely define the kind of images you will create (e.g. including a photo of a new lighting effect you will simulate).
-		If you are working on an interactive system, describe what demo you will create.
 		Define how you will measure the quality / performance of your system (e.g. graphs showing speedup, or quantifying accuracy). It may not be possible to define precise target metrics at this time, but we encourage you to try.
 		What questions do you plan to answer?
 		You should break this section into two parts: (1) what you plan to deliver, and (2) what you hope to deliver. In (1), describe what you believe you must accomplish to have a successful project and achieve the grade you expect (i.e. your baseline plan – planning for some unexpected problems would make sense). In (2), describe what you hope to achieve if things go well and you get ahead of schedule (your aspirational plan).
 
 		<h2>Schedule</h2>
-		In this section you should organize and plan the tasks and subtasks that your team will execute. Since presentations are ~4 weeks from the due-date of the proposal, you should include a set of tasks for every week.
-
+		<p>Week 1: Researching existing literature and understanding the problem further. Set up the project environment and integrate a font parsing library (FreeType, for example) to load .ttf and .otf files. Extract outlines as Bezier control points for a basic set of characters. Visualize control points to confirm we correctly parsed the files
+		</p>
+		<p>Week 2: First half of the rasterizer implementation. Build the scanline fill algorithm to correctly rasterize filled character shapes. Test on simple characters like O, H, L, etc. to confirm correctness, including compound outlines like i. 
+		</p>
+		<p>Week 3: Add supersampled anti-aliasing to smooth glyph edges at small sizes. Implement layout considerations so that full words and sentences can be rendered. Begin testing with longer strings and confirm performance
+		</p>
+		<p>Week 4: Attempt to create custom fonts or non-Latin characters and validate that the rasterizer handles more complex outlines correctly. Finalize the demo, clean up the code, and prepare the presentation showcasing Latin and kanji renders at multiple sizes.</p>
+		
 		<h2>Resources</h2>
 		List what resources, e.g. books, papers and/or online resources that are references for your project. List the computing platform, hardware and software resources that you will use for your project. You have a wide latitude here to use what you have access to, but be aware that you will have to support and trouble-shoot on your platform yourselves. If you are starting from an existing piece of code or system, describe and provide a pointer to it here.
 
