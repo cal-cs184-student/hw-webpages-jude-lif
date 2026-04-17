@@ -47,78 +47,12 @@
 		We've already added one heading per task, to make your write-up as navigable when grading. Please fit your write-up within these sections!
 		-->
 
-		<h2>Summary</h2>
-		This project involves building a CPU-based font renderer that loads TrueType (.ttf) or OpenType (.otf) font files using an existing parsing library and implements a Bezier curve rasterizer from scratch to display glyphs on screen. The rasterizer will convert each glyph's Bezier curve outlines into a filled pixel bitmap using scan line techniques, with anti-aliasing to produce smooth edges at varying sizes. Additional considerations include custom kanji fonts to be rendered.
+		<h2>Milestone Report</h2>
+		lorem ipsum dolor sit amet you get the idea
 		
-		<h2>Problem Description</h2>
-		Rendering high-quality text on screen is a fundamental requirement for many graphics systems, yet it remains a nontrivial problem 
-		due to the mathematical complexity of font representations and the need for visually smooth results across different sizes and resolutions. 
-		Modern font formats such as TrueType (.ttf) and OpenType (.otf) define glyphs using Bézier curve outlines rather than simple bitmap images, 
-		which allows for scalability but requires sophisticated processing in order to convert these outlines into pixels. 
+		<h2>Milestone Report Video</h2>
 
-		<p>The core problem our project aims to address is how to efficiently and accurately rasterize these Bézier-based glyphs into filled pixel representations 
-			using only CPU-based techniques. This involves interpreting curve data from font files, converting continuous vector shapes 
-			into discrete pixel grids, and ensuring that the resulting text appears smooth and legible. A key challenge lies in implementing a robust 
-			scanline rasterization algorithm that correctly fills complex shapes, including handling edge cases such as overlapping contours and sharp curve transitions. Additionally, 
-			achieving high-quality anti-aliasing is essential to avoid jagged edges, especially at smaller font sizes so that readability can be improved. 
-		</p>
-		<p>We implement a custom Bézier curve rasterizer from scratch, using scanline techniques to convert outlines into filled pixel bitmaps. 
-			Anti-aliasing methods will be incorporated to improve visual quality, which will result in a system capable of rendering scalable, high-fidelity text, including complex custom fonts and non-Latin based languages.</p>
-
-
-		<!-- <p>Here is an example 2x2 gridlike structure using an HTML table. Each <b>tr</b> is a row and each <b>td</b> is a column in that row. You might find this useful for framing and showing your result images in an organized fashion.</p>
-		<div style="display: flex; flex-direction: column; align-items: center;">
-			<table style="width: 100%; text-align: center; border-collapse: collapse;">
-			  <tr>
-				<td style="text-align: center;">
-				  <img src="lion.jpg" width="400px"/>
-				  <figcaption>Caption goes here.</figcaption>
-				</td>
-				<td style="text-align: center;">
-				  <img src="lion.jpg" width="400px"/>
-				  <figcaption>Caption goes here.</figcaption>
-				</td>
-			  </tr>
-			  <tr>
-				<td style="text-align: center;">
-				  <img src="lion.jpg" width="400px"/>
-				  <figcaption>Caption goes here.</figcaption>
-				</td>
-				<td style="text-align: center;">
-				  <img src="lion.jpg" width="400px"/>
-				  <figcaption>Caption goes here.</figcaption>
-				</td>
-			  </tr>
-			</table>
+		<h2>Milestone Report Slides</h2>
 		</div>
-		 -->
-		<h2>Goals and Deliverables</h2>
-			We will create a set of images showing the results of our rasterization on a variety of fonts. 
-			We will measure our results by looking at the differences between our algorithm and naive raserization without anti-aliasing. Another metric we can look at is how long it takes to do the rendering. Since we are making a defined pipeline, the scope is reasonable for 4 weeks.
-			
-			<figure>
-			<img src="acorn.png" alt="Cloth draped over sphere" style="width:70%"/>
-			<figcaption>An example of rendering with Bezier curves.</figcaption>
-			</figure>
-
-			If all goes well and there is more time to work on the project, we will attempt rendering with GPU resources, instead of only dealing with a CPU based approach. 
-			We will compare speed of the CPU and GPU approaches, and also compare the quality of the rendered images. 
-			
-		<h2>Schedule</h2>
-		<p>Week 1: Researching existing literature and understanding the problem further. Set up the project environment and integrate a font parsing library (FreeType, for example) to load .ttf and .otf files. Extract outlines as Bezier control points for a basic set of characters. Visualize control points to confirm we correctly parsed the files
-		</p>
-		<p>Week 2: First half of the rasterizer implementation. Build the scanline fill algorithm to correctly rasterize filled character shapes. Test on simple characters like O, H, L, etc. to confirm correctness, including compound outlines like i. 
-		</p>
-		<p>Week 3: Add supersampled anti-aliasing to smooth glyph edges at small sizes. Implement layout considerations so that full words and sentences can be rendered. Begin testing with longer strings and confirm performance
-		</p>
-		<p>Week 4: Attempt to create custom fonts or non-Latin characters and validate that the rasterizer handles more complex outlines correctly. Finalize the demo, clean up the code, and prepare the presentation showcasing Latin and kanji renders at multiple sizes.</p>
-		
-		<h2>Resources</h2>
-		<p>We will use FreeType to load TrueType .tff or OpenType .otf files. We will also refer to the following resources: </p>
-		<p>Bézier Curves and type Design: a tutorial | Learn – Scannerlicker! (2014, April 16). https://learn.scannerlicker.net/2014/04/16/bezier-curves-and-type-design-a-tutorial/ </p>
-		<p>Hersch, R. D. (1994). Font Rasterization: The State of the Art. Cambridge University Press, 274–296. https://doi.org/10.1007/978-3-642-78291-6_9 </p>
-		<p>The Mathematics behind Font Shapes --- Bézier Curves and More. (2022, February 27). Jdhao’s Digital Space. https://jdhao.github.io/2018/11/27/font_shape_mathematics_bezier_curves/</p>
-
-	</div>
 	</body>
 </html>
