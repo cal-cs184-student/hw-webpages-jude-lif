@@ -56,6 +56,8 @@
 		the project environment, and also using a font parsing library, which in this case is FreeType. We have also been able to extract the outlines 
 		as Bezier control points for a number of fonts, including Garamond, Egyptian Heiroglyphics, Calibri, the One Piece font, etc. 
 		We have also been able to visually confirm these control points to confirm that we have correctly parsed the files.
+		We used a simple algorithm of sweeping through t values to draw small line segments to approximate the bezier curves.
+		We can now render start with ttf files and when with CGL rendered curves for each character in the font.
 
 		<!-- <p>Here is an example 2x2 gridlike structure using an HTML table. Each <b>tr</b> is a row and each <b>td</b> is a column in that row. You might find this useful for framing and showing your result images in an organized fashion.</p>
 		<div style="display: flex; flex-direction: column; align-items: center;">
