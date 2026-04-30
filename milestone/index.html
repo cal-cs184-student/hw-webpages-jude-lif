@@ -1,0 +1,105 @@
+<html>
+	<head>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+		<style>
+			h1 {
+				text-align: center;
+			}
+
+			.container {
+				margin: 0 auto;
+				padding: 60px 20%;
+			}
+
+			figure {
+				text-align: center;
+			}
+
+			img {
+				display: inline-block;
+			}
+
+			body {
+				font-family: 'Inter', sans-serif;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+		<h1>CS184/284A Spring 2026 Final Project Milestone: CALligraphy</h1>
+		<div style="text-align: center;">Names: Amy J. Xiao, Jason P. Jiang, Jude T. Lifset, Meghna D. Subramanium</div>
+
+		<!-- <br>
+
+		Link to webpage: <a href="https://cs184.eecs.berkeley.edu/sp25">cs184.eecs.berkeley.edu/sp25</a>
+		
+		<br>
+
+		Link to GitHub repository: <a href="https://cs184.eecs.berkeley.edu/sp25">cs184.eecs.berkeley.edu/sp25</a> -->
+
+		<!-- <figure>
+			<img src="lion.jpg" alt="Lion" style="width:50%"/>
+			<figcaption>You can add images with captions!</figcaption>
+		</figure> -->
+
+		<!--
+		We've already added one heading per task, to make your write-up as navigable when grading. Please fit your write-up within these sections!
+		-->
+
+		<h2>Summary</h2>
+ 		We have been steadily working on our project throughout the past two weeks, with good progress. We have so far finished our week 1 tasks and we 
+		are halfway through our week 2 tasks.
+
+		<h2>Preliminary Results</h2>
+		We have successfully completed the tasks from Week 1, including looking into more fonts, setting up 
+		the project environment, and also using a font parsing library, which in this case is FreeType. We have also been able to extract the outlines 
+		as Bezier control points for a number of fonts, including Garamond, Egyptian Heiroglyphics, Calibri, the One Piece font, etc. 
+		We have also been able to visually confirm these control points to confirm that we have correctly parsed the files.
+		We used a simple algorithm of sweeping through t values to draw small line segments to approximate the bezier curves.
+		We can now render start with ttf files and when with CGL rendered curves for each character in the font.
+
+		<!-- <p>Here is an example 2x2 gridlike structure using an HTML table. Each <b>tr</b> is a row and each <b>td</b> is a column in that row. You might find this useful for framing and showing your result images in an organized fashion.</p>
+		<div style="display: flex; flex-direction: column; align-items: center;">
+			<table style="width: 100%; text-align: center; border-collapse: collapse;">
+			  <tr>
+				<td style="text-align: center;">
+				  <img src="lion.jpg" width="400px"/>
+				  <figcaption>Caption goes here.</figcaption>
+				</td>
+				<td style="text-align: center;">
+				  <img src="lion.jpg" width="400px"/>
+				  <figcaption>Caption goes here.</figcaption>
+				</td>
+			  </tr>
+			  <tr>
+				<td style="text-align: center;">
+				  <img src="lion.jpg" width="400px"/>
+				  <figcaption>Caption goes here.</figcaption>
+				</td>
+				<td style="text-align: center;">
+				  <img src="lion.jpg" width="400px"/>
+				  <figcaption>Caption goes here.</figcaption>
+				</td>
+			  </tr>
+			</table>
+		</div>
+		 -->
+		<h2>Reflect on Progress relative to Plan</h2>
+		We've finished week 1, and are in the middle of Week 2. We have finished the rasterizer implementation but haven't done the scanline fill algorithm yet. We've tested our implementation on different characters like i, j, and O.
+
+		<h2>Updated Schedule</h2>
+		<p>Week 1 (COMPLETE): Researching existing literature and understanding the problem further. Set up the project environment and integrate a font parsing library (FreeType, for example) to load .ttf and .otf files. Extract outlines as Bezier control points for a basic set of characters. Visualize control points to confirm we correctly parsed the files
+		</p>
+		<p>Week 2 (In the middle): First half of the rasterizer implementation. Build the scanline fill algorithm to correctly rasterize filled character shapes. Test on simple characters like O, H, L, etc. to confirm correctness, including compound outlines like i. 
+		</p>
+		<p>Week 3: Add supersampled anti-aliasing to smooth glyph edges at small sizes. Implement layout considerations so that full words and sentences can be rendered. Begin testing with longer strings and confirm performance
+		</p>
+		<p>Week 4: Attempt to create custom fonts or non-Latin characters and validate that the rasterizer handles more complex outlines correctly. We will also attempt to implement live typing, and cache repeat characters. Finalize the demo, clean up the code, and prepare the presentation showcasing Latin and other character renders at multiple sizes.</p>
+		
+		<h2>Slides and Link to Video</h2>
+		Link to Slides: <a href="https://docs.google.com/presentation/d/1VDbJuvCQmoF2yLFCtN-YiM0Q5xkT4Dch4cyR9ZVPCdU/edit?usp=sharing">https://docs.google.com/presentation/d/1VDbJuvCQmoF2yLFCtN-YiM0Q5xkT4Dch4cyR9ZVPCdU/edit?usp=sharing</a>
+		<p>Link to Video: <a href="https://drive.google.com/file/d/1qlxVmBP5yT4cMCzrs-GACV9LHQOyn4F-/view?usp=sharing">https://drive.google.com/file/d/1qlxVmBP5yT4cMCzrs-GACV9LHQOyn4F-/view?usp=sharing</a></p>
+	</div>
+	</body>
+</html>
